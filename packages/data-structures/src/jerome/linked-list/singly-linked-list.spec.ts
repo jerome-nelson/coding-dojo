@@ -1,6 +1,6 @@
-import { SingularList, SingularListStructure } from "./linked-list";
+import { SingularList, SingleListStructure } from "./singly-linked-list";
 
-let result: SingularListStructure;
+let result: SingleListStructure;
 
 describe("Singular Linked List", () => {
 

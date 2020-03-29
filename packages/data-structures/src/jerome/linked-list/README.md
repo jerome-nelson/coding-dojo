@@ -20,3 +20,8 @@ Linked List Elements however, require iteration; the only way to access elements
 Another common operation that we apply to such structures is the adding and removing of elements. Arrays tend to be quite slow here, because of their static nature. They have a fixed amount of memory that they keep and adding a new item usually requires the whole array to be copied while allocating more memory. Now, imagine adding an element in a particular location in the middle of the array and what kind of shuffling this would cause. Removing an element is available but in reality you only nullify the value. The memory is still being reserved for the array.
 
 Linked lists are more performant in this situation. Adding an element anywhere in the list will require only a change of pointers. Removing is also a fast operation which will also free up the memory allocated for the particular element. If there are no references to it it will be garbage collected.
+
+## Types of List
+* Singly Linked List
+* Doubly Linked List
+* Circular Linked List

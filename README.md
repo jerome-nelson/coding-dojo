@@ -5,3 +5,7 @@
     ii. Trees
     iii. Stacks
     iv. Queues
+
+## TODOS
+* Install Lerna for mono-repo management
+    - Configure tsc to build packages separately

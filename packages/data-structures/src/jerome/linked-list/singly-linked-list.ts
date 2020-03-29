@@ -1,27 +1,27 @@
-import { DataNode, NodeInterface } from "../node";
+import { DataNode, NodeInterface } from "../node/node";
 
-export interface LinkedPayload extends NodeInterface {
-    next?: NextNodeType;
+export interface SingularNodes extends NodeInterface {
+    next?: NodeType;
 }
 
-type NextNodeType = LinkedPayload | null;
-export interface SingularListStructure {
-    readonly getHead: NextNodeType;
-    readonly getTail: NextNodeType;
-    access(value: unknown, element?: LinkedPayload): NextNodeType;
+export type NodeType = SingularNodes | null;
+export interface SingleListStructure {
+    readonly getHead: NodeType;
+    readonly getTail: NodeType;
+    access(value: unknown, element?: SingularNodes): NodeType;
     add(value: unknown): void;
     delete(value: unknown): void;
-    traverse(value: number): NextNodeType;
+    traverse(value: number): NodeType;
 }
 
 enum E_STATE {
     ACCESS = "There are no elements to access! Add something!"
 }
 
-export class SingularList implements SingularListStructure {
+export class SingularList implements SingleListStructure {
 
-    private head: NextNodeType;
-    private tail: NextNodeType;
+    private head: NodeType;
+    private tail: NodeType;
 
     constructor() {
         this.head = null;
@@ -29,10 +29,7 @@ export class SingularList implements SingularListStructure {
     }
 
     add(value: unknown) {
-        const element = Object.assign(
-            { next: null }, 
-            DataNode(value)
-        );
+        const element = this._createNewElement(value);
 
         if (!this.head) {
             this.head = element;
@@ -76,7 +73,7 @@ export class SingularList implements SingularListStructure {
         }
     }
 
-    access(value: unknown, element?: LinkedPayload): NextNodeType {
+    access(value: unknown, element?: SingularNodes): NodeType {
         const start = element || this.head;
 
         if (!start) {
@@ -90,7 +87,7 @@ export class SingularList implements SingularListStructure {
         return !start.next ? null : this.access(value, start.next);
     }
 
-    traverse(steps: number, offset?: LinkedPayload): NextNodeType {
+    traverse(steps: number, offset?: SingularNodes): NodeType {
         
         const element = offset || this.head;
         if (!element) {
@@ -113,7 +110,14 @@ export class SingularList implements SingularListStructure {
         return this.tail;
     }
 
-    private _getOrder(value: unknown, currentStep: number = 1, offset?: LinkedPayload): number | null {
+    private _createNewElement(value: unknown) {
+        return  Object.assign(
+            { next: null }, 
+            DataNode(value)
+        );
+    }
+
+    private _getOrder(value: unknown, currentStep: number = 1, offset?: SingularNodes): number | null {
         const start = offset || this.head;
         
         if (!start) {
