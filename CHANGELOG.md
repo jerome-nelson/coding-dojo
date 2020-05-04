@@ -2,9 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.1.3...v1.4.0) (2020-05-04)
+
+
+### Features
+
+* addition of camel-case coding kata ([2a759e5](https://bitbucket.org/jerome-nelson/coding-dojo/commit/2a759e539623171726e8e2abd382b89be5a23ccd))
+* addition of react package ([5760fc6](https://bitbucket.org/jerome-nelson/coding-dojo/commit/5760fc6e41472bbf5ce0cec63c6533f450323164))
+* addition of socks kata ([5c446c6](https://bitbucket.org/jerome-nelson/coding-dojo/commit/5c446c60f77e8ccc0ae64dddb1a9a1f9ca597a5c))
+
 ### [1.1.3](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.1.2...v1.1.3) (2020-04-27)
 
 ### [1.1.2](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.1.1...v1.1.2) (2020-04-27)
+## [1.3.0](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.2.0...v1.3.0) (2020-04-27)
+
+
+### Features
+
+* addition of socks kata ([98fe1b4](https://bitbucket.org/jerome-nelson/coding-dojo/commit/98fe1b44b6ff0966d84080b7ed108b3fc165d993))
+
+## [1.2.0](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.1.1...v1.2.0) (2020-04-21)
+
+
+### Features
+
+* addition of camel-case coding kata ([f112a57](https://bitbucket.org/jerome-nelson/coding-dojo/commit/f112a57a68e686ef1fa6ba823c9872ec790969bc))
 
 ### [1.1.1](https://bitbucket.org/jerome-nelson/coding-dojo/compare/v1.1.0...v1.1.1) (2020-03-29)
 
