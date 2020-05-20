@@ -3,8 +3,8 @@
 This monorepo contains a set of structured lessons, summarising essential topics for Computer Engineering. 
 
 ## Recommended Reading:
-* Cracking the Coding Interview
-* Introduction to Algorithms
+* [Cracking the Coding Interview by Gayle Laakman <img src="//ir-uk.amazon-adsystem.com/e/ir?t=jeromenelson-21&l=am2&o=2&a=0984782850" />](https://www.amazon.co.uk/gp/product/0984782850/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0984782850&linkCode=as2&tag=jeromenelson-21&linkId=77b93057bfb2e98a86d541fc32f3b85e)[""](src="//ir-uk.amazon-adsystem.com/e/ir?t=jeromenelson-21&l=am2&o=2&a=0984782850")
+* [Introduction to Algorithms <img src="//ir-uk.amazon-adsystem.com/e/ir?t=jeromenelson-21&l=am2&o=2&a=0262033844" />](https://www.amazon.co.uk/gp/product/0262033844/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=0262033844&linkCode=as2&tag=jeromenelson-21&linkId=9e9366fe7d621ea9daee261d0dc97226)
 
 ## End Goal: To confidently code and to understand the basics needed for Computer Engineering.
 
