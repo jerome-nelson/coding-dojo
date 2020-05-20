@@ -1,0 +1,5 @@
+{
+    "name": "@skelia/big-o",
+    "description": "Package relating to Big-O Notation",
+    "license": "ISC"
+}

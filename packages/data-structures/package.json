@@ -1,6 +1,5 @@
 {
-  "name": "@coding-dojos/data-structures",
-  "version": "1.1.1",
-  "description": "",
+  "name": "@skelia/data-structures",
+  "description": "JavaScript and TypeScript implementation of Data Structures",
   "license": "ISC"
 }
