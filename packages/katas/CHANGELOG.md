@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.4 (2020-05-21)
+
+
+### Bug Fixes
+
+* add publish ([#9](https://github.com/jerome-nelson/coding-dojo/issues/9)) ([bf8bd05](https://github.com/jerome-nelson/coding-dojo/commit/bf8bd0572103f4636aee64cbbe15df5abd2954f0))
+
+
+
+
+
 ## 0.0.3 (2020-05-21)
 
 **Note:** Version bump only for package @skelia/katas
