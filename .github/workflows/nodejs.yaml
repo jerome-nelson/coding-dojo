@@ -27,3 +27,5 @@ jobs:
        token: '${{ secrets.GITHUB_TOKEN }}'  
     - run: npm ci
     - run: npm run ci:publish
+      env: 
+        NODE_AUTH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'  
