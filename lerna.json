@@ -7,7 +7,6 @@
 		"publish": {
 			"yes": true,
 			"message": "chore: publish new versions",
-			"registry": "https://npm.pkg.github.com/jerome-nelson",
 			"conventionalCommits": true,
 			"ignoreChanges": [
 				"*.md",
