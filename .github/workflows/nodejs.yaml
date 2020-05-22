@@ -1,0 +1,36 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: LernaJS
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-16.04
+    strategy:
+      matrix:
+        node-version: [13.x]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Node ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://npm.pkg.github.com'
+    - name: Setup Git Identity
+      uses: actions-cyborg/gha-git-credentials@v1
+      with:
+        name: 'Actions Cyborg'
+        email: 'actions-cyborg@gmail.com'
+        actor: 'actions-cyborg'
+        token: '${{ secrets.GITHUB_TOKEN }}'  
+    - name: Set NPM Config and Install
+      run: npm config set '//npm.pkg.github.com/:_authToken' $GITHUB_TOKEN
+      run: npm ci
+    - name: Publish Packages
+      run: npm run ci:publish
