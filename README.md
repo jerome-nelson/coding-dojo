@@ -1,5 +1,7 @@
 # Front-End Coding Dojo
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
 This monorepo contains a set of structured lessons, summarising essential topics for Computer Engineering. 
 
 ## Recommended Reading:
