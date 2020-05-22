@@ -1,5 +1,11 @@
 {
-    "name": "@skelia/big-o",
+    "name": "@jerome-nelson/big-o",
+    "version": "0.0.0",
     "description": "Package relating to Big-O Notation",
-    "license": "ISC"
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
+        "directory": "packages/big-o"
+    }
 }
