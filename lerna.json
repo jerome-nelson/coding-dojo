@@ -1,0 +1,32 @@
+{
+	"packages": [
+		"packages/*"
+	],
+	"version": "independent",
+	"command": {
+		"publish": {
+			"yes": true,
+			"message": "chore: publish new versions",
+			"registry": "https://npm.pkg.github.com/",
+			"conventionalCommits": true,
+			"ignoreChanges": [
+				"*.md",
+				"*.spec.ts"
+			]
+		},
+		"bootstrap": {
+			"scope": [
+				"@skelia/*"
+			],
+			"hoist": true
+		},
+		"exec": {
+			"scope": [
+				"@skelia/*"
+			]
+		},
+		"clean": {
+			"yes": true
+		}
+	}
+}
