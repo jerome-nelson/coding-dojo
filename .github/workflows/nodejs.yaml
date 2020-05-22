@@ -25,9 +25,7 @@ jobs:
     - uses: actions-cyborg/gha-git-credentials@v1
       with:
        token: '${{ secrets.GITHUB_TOKEN }}'  
-      env: 
-        NPM_TOKEN: '${{ secrets.GITHUB_TOKEN }}'  
-    - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+    - run: npm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
     - run: npm ci
     - run: npm run ci:publish
       env: 
