@@ -1,5 +1,11 @@
 {
-  "name": "@skelia/data-structures",
+  "name": "@jerome-nelson/data-structures",
+  "version": "0.0.0",
   "description": "JavaScript and TypeScript implementation of Data Structures",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
+    "directory": "packages/data-structures"
+}
 }
