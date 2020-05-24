@@ -1,4 +1,4 @@
-import { DataNode, NodeInterface } from "../node/node";
+import { DataNode, NodeInterface } from "../../node/jerome/node";
 
 export interface SingularNodes extends NodeInterface {
     next?: NodeType;
