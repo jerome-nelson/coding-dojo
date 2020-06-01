@@ -7,11 +7,11 @@
 		"node": ">=10.0.0"
 	},
 	"scripts": {
-		"bootstrap": "lerna bootstrap",
 		"build": "tsc",
 		"test": "jest --silent",
 		"ui:test": "react-scripts test",
-		"ci:publish": "lerna publish --yes"
+		"ci:publish": "lerna publish --yes",
+		"postinstall": "lerna bootstrap"
 	},
 	"dependencies": {
 		"antd": "^4.2.4",

@@ -16,13 +16,13 @@
 		},
 		"bootstrap": {
 			"scope": [
-				"@skelia/*"
+				"@jerome-nelson/*"
 			],
 			"hoist": true
 		},
 		"exec": {
 			"scope": [
-				"@skelia/*"
+				"@jerome-nelson/*"
 			]
 		},
 		"clean": {
