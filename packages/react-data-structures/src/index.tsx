@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
+import { NodeUI } from './linkedlist/node';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NodeUI value="head" isHead />
+    <NodeUI value="test"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
