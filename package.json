@@ -1,52 +1,79 @@
 {
-  "name": "@jerome-nelson/coding-dojo",
-  "author": "Jerome Nelson <jerome.nelson@skelia.com>",
-  "version": "0.0.0",
-  "description": "Front-end coding sessions for Skelia Employee's",
-  "engines": {
-    "node": ">=10.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-typescript": "^7.9.0",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/jest": "^25.2.3",
-    "@types/node": "^13.9.5",
-    "babel-jest": "^25.2.3",
-    "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "lerna": "^3.21.0",
-    "ts-jest": "^26.0.0",
-    "typescript": "^3.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "license": "ISC",
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
-  },
-  "publishConfig": {
-    "scope": "@jerome-nelson",
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest --silent",
-    "ci:publish": "lerna publish --yes"
-  }
+	"name": "@jerome-nelson/coding-dojo",
+	"author": "Jerome Nelson <jerome.nelson@skelia.com>",
+	"version": "0.0.0",
+	"description": "Front-end coding sessions for Skelia Employee's",
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"build": "tsc",
+		"test": "jest --silent",
+		"ci:publish": "lerna publish --yes"
+	  },
+	"dependencies": {
+		"antd": "^4.2.4",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "3.4.1",
+		"typescript": "^3.8.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-typescript": "^7.9.0",
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"@types/jest": "^24.9.0",
+		"@types/node": "^13.9.5",
+		"@types/react": "^16.9.0",
+		"@types/react-dom": "^16.9.0",
+		"babel-jest": "^24.9.0",
+		"husky": "^4.2.5",
+		"jest": "^24.9.0",
+		"lerna": "^3.21.0",
+		"ts-jest": "^26.0.0"
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"license": "ISC",
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json"
+		]
+	},
+	"publishConfig": {
+		"scope": "@jerome-nelson",
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
