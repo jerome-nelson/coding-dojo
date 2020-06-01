@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { NodeUI } from "./node/node";
 import App from './App';
-import { NodeUI } from './linkedlist/node';
+import { LinkedList } from './linkedlist/LinkedList';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NodeUI value="head" isHead />
-    <NodeUI value="test"/>
+    <LinkedList>
+      <NodeUI value="head" isHead />
+      <NodeUI value="test" />
+    </LinkedList>
   </React.StrictMode>,
   document.getElementById('root')
 );
