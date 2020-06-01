@@ -10,6 +10,7 @@
 		"bootstrap": "lerna bootstrap",
 		"build": "tsc",
 		"test": "jest --silent",
+		"ui:test": "react-scripts test",
 		"ci:publish": "lerna publish --yes"
 	  },
 	"dependencies": {

@@ -6,3 +6,7 @@
 
 * On commit
     - we use the (Conventional Commit Guidelines)[https://www.conventionalcommits.org/en/v1.0.0/#summary], husky will prevent incorrect messages from being committed
+
+* Testing
+    - Testing .js/ts uses Jest
+    - React Testing - uses React Testing
