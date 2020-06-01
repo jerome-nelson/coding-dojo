@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
+			"typescript.tsc.autoDetect": "off",
             "type": "node",
 			"request": "launch",
 			"name": "Debug Current File",
