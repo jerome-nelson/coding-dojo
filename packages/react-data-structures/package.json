@@ -7,14 +7,14 @@
     "directory": "packages/react-data-structures"
   },
   "devDependencies": {
-		"@types/jest": "^24.9.0",
-		"@types/node": "^13.9.5",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-		"babel-jest": "^24.9.0",
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.9.5",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "babel-jest": "^24.9.0",
     "react-scripts": "3.4.1",
     "typescript": "^3.8.3"
   },
