@@ -1,47 +1,86 @@
-import { Stack } from "./stack";
+export class Queue {
 
-describe("Stacks", () => {
+    head: number | null = null;
+    tail: number | null = null;
+    private list: any[] = [];
+    
+    constructor(
+        size: number
+    ) {
+        for (let i= 1; i < size; i+=1) {
+            this.list[i] = null;
+        }
+    }
+
+    enqueue(value: any) {
+        if (!this.head || !this.tail) {
+            this.head = 1;
+            this.tail = 1;
+            this.list[this.tail] = value;
+            return;
+        } 
+
+            this.head += 1;
+            this.list[this.head] = this.list[this.tail];
+            this.list[this.tail] = value;
+    }
+
+    dequeue() {
+        if (!this.head || !this.tail) {
+            throw new Error('Queue is empty');
+        }
+        const current = this.list[this.head];
+        this.head -= 1;
+        return current;
+    }
+
+    get getList() {
+        return this.list;
+    }
+
+    get showHead() {
+        return this.head;
+    }
+
+
+    get showTail() {
+        return this.tail;
+    }
+}
+
+describe("Queues", () => {
     it("should assign a fixed set on initialisation", () => {
-        const newStack = new Stack(4);
-        expect(newStack.getList.length).toBe(4);
-        expect(newStack.top).toBe(0);
+        const newQ = new Queue(4);
+        expect(newQ.getList.length).toBe(4);
     });
 
     describe("when performing operations", () => {
 
-        let stack: Stack;
+        let queueInstance: Queue;
 
         beforeEach(() => {
-            stack = new Stack(4);
-            stack.insert('A Value');
+            queueInstance = new Queue(4);
+        });
+
+        describe("Enqueue/Dequeue", () => {
+            it("should add an item to data structure", () => {
+                queueInstance.enqueue('Item 1');
+                queueInstance.enqueue('Item 2');
+
+                expect(queueInstance.dequeue()).toBe('Item 1');
+                expect(queueInstance.dequeue()).toBe('Item 2');
+            });
+            it("if empty queue is dequeued error should be thrown", () => {
+                expect(() => queueInstance.dequeue()).toThrowError('Queue is empty');
+            });
+        });
+        describe("Head/Tail", () => {
+            it("should return the current assigned key", () => {
+                queueInstance.enqueue('Item 1');
+                queueInstance.enqueue('Item 2');
+                expect(queueInstance.showHead).toBe(2);
+                expect(queueInstance.showTail).toBe(1);
+            })
         })
-
-        it("should update top on insert", () => {
-            expect(stack.top).toBe(1);
-        });
-
-        it("should contain new value on insert", () => {
-            expect(stack.top).toBe(1);
-            expect(stack.delete()).toBe('A Value');
-        });
-
-        it("should return and remove old value from stack on delete", () => {
-            stack.insert('A Value to Delete');
-            expect(stack.top).toBe(2);
-            expect(stack.delete()).toBe('A Value to Delete');
-            expect(stack.top).toBe(1);
-        });
-
-        describe("edges cases", () => {
-            it("should throw stack 'underflow' error when deleting from empty stack", () => {
-                stack.delete();
-                expect(() => stack.delete()).toThrowError('Stack Underflow!!');
-            });
-            it("should throw stack 'overflow' error when insertion is run on full stack", () => {
-                const stack = new Stack(1);
-                stack.insert('Safely added');
-                expect(() => stack.insert('Should cause stack overflow')).toThrowError('Stack Overflow!!!');
-            });
-        });
     });
 });
