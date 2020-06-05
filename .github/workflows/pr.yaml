@@ -1,15 +1,13 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: LernaJS
+name: PRs Workflow
 
-on:
-  push:
-    branches: [ master ]
+on: [pull_request]
 
 jobs:
-  publish:
-    name: Publish
+  build:
+    name: Run Tests
     runs-on: ubuntu-16.04
     strategy:
       matrix:
@@ -22,8 +20,6 @@ jobs:
       with: 
         always-auth: true
         node-version: ${{ matrix.node-version }}
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@jerome-nelson'
     - name: Setup Git Identity
       uses: actions-cyborg/gha-git-credentials@v1
       with:
@@ -37,5 +33,5 @@ jobs:
         npm ci
       env:
         NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-    - name: Publish Packages
-      run: npm run ci:publish
+    - name: Run TypeScript Tests
+      run: npm run test
