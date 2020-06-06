@@ -22,9 +22,7 @@ const Square = ({ value }: { value: string }) => {
 }
 
 export function NodeUI({ isHead, value }: NodeUI) {
-    console.log(isHead);
     return <React.Fragment>
         {isHead ? <Triangle value={value} /> : <Square value={value} />}
-
     </React.Fragment>;
 }
