@@ -5,10 +5,7 @@ interface NodeUI {
     isHead?: boolean;
     value: string;
 }
-//  node-ui-triangle, .node-ui-rectangle 
-// Node Value can be anything
-// Data is not optional
-// Linking?
+
 const Triangle = ({ value }: { value: string }) => {
     return (<div className="node-ui-triangle">
         <div>{value}</div>

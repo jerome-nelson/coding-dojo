@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { NodeUI } from "./node/node";
-import App from './App';
-import { LinkedList } from './linkedlist/LinkedList';
+
+import { LinkedList } from './linkedlist/linkedlist';
 
 import * as serviceWorker from './serviceWorker';
 
