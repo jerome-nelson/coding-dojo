@@ -13,7 +13,7 @@
 //         return this.Stack
 //     }
 // }
-class DataNodeQueue {
+export class DataNodeQueue {
     value: unknown;
     next: DataNodeQueue | null;
 
@@ -26,7 +26,7 @@ class DataNodeQueue {
 
 }
 
-class Queue {
+export class Queue {
     head: DataNodeQueue | null = null;
     tail: DataNodeQueue | null = null;
 

@@ -13,7 +13,7 @@
 //         return this.Stack
 //     }
 // }
-class DataNode {
+export class DataNode {
     value: unknown;
     next: DataNode | null;
 
@@ -26,7 +26,7 @@ class DataNode {
 
 }
 
-class Stack {
+export class Stack {
     head: DataNode | null = null;
     unshift(value: unknown) {
         if (!this.head) {

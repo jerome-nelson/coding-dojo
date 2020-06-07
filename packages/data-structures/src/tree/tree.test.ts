@@ -2,11 +2,11 @@
 //     value: unknown;
 //     children : Vertex[];
 // }
-interface Root {
+export interface Root {
     value: unknown;
     children: Root[];
 }
-class Tree {
+export class Tree {
     root: Root | null = null;
 
     add(value: unknown, reference?: Root) {
