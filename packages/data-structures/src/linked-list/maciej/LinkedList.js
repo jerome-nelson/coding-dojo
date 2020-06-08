@@ -29,8 +29,6 @@ class LinkedList {
     pop() {
         if (!this.head) return undefined;
 
-        let temp = this.tail;
-
         if (this.head === this.tail) {
             this.head = null;
             this.tail = null;
