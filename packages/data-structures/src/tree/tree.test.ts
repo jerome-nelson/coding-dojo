@@ -1,41 +1,4 @@
-// class Vertex{
-//     value: unknown;
-//     children : Vertex[];
-// }
-export interface Root {
-    value: unknown;
-    children: Root[];
-}
-export class Tree {
-    root: Root | null = null;
-
-    add(value: unknown, reference?: Root) {
-        const newVertex = {
-            value,
-            children: []
-        }
-
-        if (!this.root) {
-            this.root = newVertex;
-            return newVertex;
-        }
-        if (this.root && !reference) this.root.children.push(newVertex);
-        if (reference) {
-            reference.children.push(newVertex);
-        }
-        return newVertex;
-    }
-}
-
-/*
-* Tree Structure
-*
-* Vertex {
-*   value: unknown
-*   children: Vertex[]   // Each vertex will point  
-* }
-*
-*/
+import { Tree } from './tree'
 
 describe("Tree Structure", () => {
     it("should exist", () => {
