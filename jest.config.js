@@ -75,7 +75,7 @@ module.exports = {
     "json",
     // "jsx",
     "ts",
-    // "tsx",
+    "tsx",
     "node"
   ],
 
