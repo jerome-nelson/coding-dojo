@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { NodeUI } from "./node/node";
-
-import { LinkedList } from './linkedlist/linkedlist';
+import { Dashboard } from './dashboard/Dashboard';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LinkedList>
-      <NodeUI value="head" isHead />
-      <NodeUI value="test" />
-    </LinkedList>
+    <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')
 );
