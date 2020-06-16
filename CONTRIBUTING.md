@@ -2,7 +2,7 @@
 
 - [Installing Dependencies](#installing)
 - [Npm Tasks](#npm-tasks)
-- [Commit Guidelines](commit-guidelines)
+- [Commit Guidelines](#commit-guidelines)
 - [Bumping of packages](#package-bumps)
 - [Pull Requests](#pull-requests)
 
@@ -22,7 +22,7 @@ There is a `postinstall` script that after `npm install` has finished will boots
 | test       | Runs all React and JS/TS tests in monorepo                                            |
 | ci:publish | Publishes individual packages                                                         |
 
-## [Commit Guidelines](commit-guidelines)
+## [Commit Guidelines](#commit-guidelines)
 
 All commits should use the (Conventional Commits Specification)[https://www.conventionalcommits.org/en/v1.0.0/#summary]. Commits are linted using (husky)[https://github.com/typicode/husky/] to enforce this.
 
