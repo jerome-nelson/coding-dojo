@@ -1,6 +1,6 @@
 {
     "name": "@jerome-nelson/big-o",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "Package relating to Big-O Notation",
     "license": "ISC",
     "repository": {
