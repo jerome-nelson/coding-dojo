@@ -1,14 +1,18 @@
 {
   "exclude": [
     "node_modules",
-    "*.spec.ts",
     "**/node_modules",
-    "**/dist",
-    "*.tsx"
+    "**/dist"
   ],
   "compilerOptions": {
     "target": "ESNEXT",
     "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "react",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -25,20 +29,11 @@
     "baseUrl": "./packages",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
-  },
-  "include": [
-    "src"
-  ]
+    "noEmit": true
+  }
 }

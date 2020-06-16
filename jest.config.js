@@ -1,5 +1,6 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
+const path = require('path');
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -74,7 +75,7 @@ module.exports = {
     "json",
     // "jsx",
     "ts",
-    // "tsx",
+    "tsx",
     "node"
   ],
 
@@ -123,16 +124,20 @@ module.exports = {
   // runner: "jest-runner",
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  // setupFiles: [],
+  setupFiles: [
+    require.resolve('react-app-polyfill/jsdom')
+  ],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: [
+    '<rootDir>/_jest/setupTests.ts'
+  ],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -169,6 +174,8 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.css$': path.resolve('_jest/cssTransform.js'),
+      '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': path.resolve('_jest/fileTransform.js'),
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
