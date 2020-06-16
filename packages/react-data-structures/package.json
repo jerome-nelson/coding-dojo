@@ -1,6 +1,6 @@
 {
   "name": "@jerome-nelson/react-data-structures",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
@@ -19,9 +19,9 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
+    "@material-ui/core": "^4.10.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "@material-ui/core": "^4.10.1"
+    "react-dom": "^16.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
