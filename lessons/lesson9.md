@@ -54,8 +54,7 @@ The principles of Breadth-First Search apply to this algorithm with one main dif
 
 */
 // Algorithm Traversal Routes
-// root -> 1 -> 2
-// 1 -> 3 -> 1 -> 4
+// root -> 1 -> 3 -> 1 -> 4
 // root -> 2 -> 5 -> 2 -> 6
 ```
 
