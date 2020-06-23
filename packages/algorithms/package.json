@@ -1,0 +1,12 @@
+{
+  "name": "@jerome-nelson/algorithms",
+  "author": "Maciej Molka <maciej.molka@skelia.com>",
+  "version": "0.0.0",
+  "description": "JavaScript and TypeScript implementation of algorithms",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
+    "directory": "packages/algorithms"
+  }
+}
