@@ -10,7 +10,8 @@
 		"build": "tsc",
 		"test": "jest --silent",
 		"ci:publish": "lerna publish --yes",
-		"postinstall": "lerna bootstrap"
+		"postinstall": "lerna bootstrap",
+		"mock:server": "nodemon ./utils/server/server.js"
 	},
 	"dependencies": {
 		"antd": "^4.2.4",
@@ -33,9 +34,12 @@
 		"@types/react": "^16.9.0",
 		"@types/react-dom": "^16.9.0",
 		"babel-jest": "^24.9.0",
+		"express": "^4.17.1",
 		"husky": "^4.2.5",
 		"jest": "^24.9.0",
 		"lerna": "^3.21.0",
+		"nodemon": "^2.0.4",
+		"portfinder-sync": "0.0.2",
 		"ts-jest": "^26.0.0"
 	},
 	"husky": {
