@@ -64,7 +64,11 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export function Header() {
+interface HeaderProps {
+  onUpdate: (value: string) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onUpdate }) => {
   const classes = useStyles();
 
   return (
@@ -72,13 +76,14 @@ export function Header() {
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-           Customer Hack Tool
+            Customer Hack Tool
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
+              onChange={e => onUpdate(e.target.value)}
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,

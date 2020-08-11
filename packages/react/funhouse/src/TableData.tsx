@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -14,8 +14,6 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
-import { useAPI } from "./hooks/getData";
 
 const useStyles1 = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,7 +31,7 @@ interface TablePaginationActionsProps {
   onChangePage: (event: React.MouseEvent<HTMLButtonElement>, newPage: number) => void;
 }
 
-function TablePaginationActions(props: TablePaginationActionsProps) {
+const TablePaginationActions = (props: TablePaginationActionsProps) => {
   const classes = useStyles1();
   const theme = useTheme();
   const { count, page, rowsPerPage, onChangePage } = props;
@@ -90,9 +88,8 @@ const useStyles2 = makeStyles({
   },
 });
 
-export function CustomPaginationActionsTable() {
+export const CustomPaginationActionsTable = ({ results }: any): any => {
 
-  const [results, _] = useAPI("/customers/get/all");  
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -109,12 +106,12 @@ export function CustomPaginationActionsTable() {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-  
-  if (results.has) {
+
+  if (results.isError) {
     return <React.Fragment>Nope</React.Fragment>;
   }
 
-  return results.notlong ? <CircularProgress color="secondary" /> : (
+  return results.isLoading ? <CircularProgress color="secondary" /> : (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="custom pagination table">
         <TableBody>

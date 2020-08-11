@@ -1,5 +1,11 @@
 {
-  "name": "funhouse",
+  "name": "@jerome-nelson/funhouse",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
+    "directory": "packages/react/funhouse"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
