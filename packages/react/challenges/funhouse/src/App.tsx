@@ -14,7 +14,7 @@ interface ExpectedData {
 }
 
 const App = () => {
-  const [results, setResults] = useAPI<ExpectedData>("http://localhost:3001/customers/get/all");
+  const [results, setResults] = useAPI<ExpectedData>("http://localhost:3002/customers/get/all");
 
   const filter = (comparison: string) => {
     setResults(results.data.filter(el => {

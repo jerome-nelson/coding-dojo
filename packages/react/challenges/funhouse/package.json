@@ -1,10 +1,10 @@
 {
   "name": "@jerome-nelson/funhouse",
-  "description": "",
+  "description": "A small error-prone build in React",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
-    "directory": "packages/react/funhouse"
+    "directory": "packages/react/challenges/funhouse"
   },
   "version": "0.1.0",
   "private": true,
