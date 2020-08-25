@@ -1,7 +1,7 @@
 {
   "name": "@jerome-nelson/algorithms",
   "author": "Maciej Molka <maciej.molka@skelia.com>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JavaScript and TypeScript implementation of algorithms",
   "license": "ISC",
   "repository": {
