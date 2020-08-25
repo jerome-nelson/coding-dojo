@@ -11,30 +11,6 @@ export const expected = [
     ]
 ];
 
-const mock = {
-    root: {
-        right: {
-            value: 2,
-            left: {
-                value: 5,
-                left: {
-                    value: 6
-                }
-            },
-            right: null
-        },
-        left: {
-            value: 1,
-            left: {
-                value: 3
-            },
-            right: {
-                value: 4
-            }
-        }
-    }
-}
-
 const breadFirst = (nodes: any): any => {
 
     const output = {
