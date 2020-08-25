@@ -4,7 +4,7 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
-    "directory": "packages/react-data-structures"
+    "directory": "packages/data-structures"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
