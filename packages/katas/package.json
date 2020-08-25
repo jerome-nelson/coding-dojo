@@ -1,7 +1,7 @@
 {
     "name": "@jerome-nelson/katas",
     "description": "Coding katas used in lessons",
-    "version": "0.1.7",
+    "version": "0.1.1",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com/jerome-nelson/coding-dojo.git",
