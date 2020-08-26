@@ -1,0 +1,10 @@
+.gridItem {
+    /* Question: Can we make this  */
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border: solid 1px red;
+}
+.hasSnake {
+    background-color: #000;
+}
